@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: yellow;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+    font-weight: bold;
+}
+
+.papa{
+    font-size: 35px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+}
+
+.number{
+    margin-top: 105px;
+}
+
+.child{
+    display:  flex;
+    gap: 50px;
+}
+
+/* *********** ROW 1 ************* */
+.sam1{
+    background-color: rgb(96, 163, 204);
+    animation: sam1box 3s ease-in-out infinite alternate;
+}
+@keyframes sam1box {
+    from{
+        transform: skew(-25deg);
+    }
+    to{
+        transform: skew(25deg);
+    }
+}
+
+/* *********** ROW 2 ************* */
+.sam2{
+    background-color: rgb(163, 160, 160);
+    animation: sam2box 2s ease-in-out infinite alternate;
+}
+@keyframes sam2box {
+    from{
+        transform: skewY(-20deg);
+    }
+    to{
+        transform: skewY(20deg);
+    }
+}
+
+/* *********** ROW 3 ************* */
+.sam3{
+    background-color: rgb(64, 110, 138);
+    animation: sam3box 2s ease-out infinite;
+}
+@keyframes sam3box {
+    from{
+        transform: rotate(0)
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* *********** ROW 4 ************* */
+.col1{
+    background-color: rgb(95, 145, 175);
+    border: 3px solid rgb(64, 110, 138);
+    animation: col1box 2s ease-out infinite alternate;
+}
+@keyframes col1box {
+    from{
+        transform: scaleY(1);
+    }
+    to{
+        transform: scaleY(0.5);
+    }
+}
+
+.col2{
+    background-color: brown;
+    border: 3px solid maroon;
+    animation: col2box 2s ease-out infinite alternate;
+}
+@keyframes col2box {
+    from{
+        transform: scaleX(1);
+    }
+    to{
+        transform: scaleX(0.5);
+    }
+}
+
+.col3{
+    background-color: rgb(94, 195, 94);
+    border: 3px solid green;
+    animation: col3box 2s ease-in-out infinite alternate;
+}
+@keyframes col3box {
+    from{
+        transform: rotate(10deg);
+    }
+    to{
+        transform: rotate(-90deg);
+    }
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+a{
+    color: brown;
+}
+
+
+/********************** INDEX 2 **************************** */
+
+.section2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.colorbox{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(115, 227, 109);
+    transition: all 2s linear;
+    margin-bottom: 20px;
+}
+.colorbox:hover{
+    width: 300px;   
+}
+
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(115, 227, 109);
+    transition: all 2s linear;
+    margin-bottom: 20px;
+}
+.box2:hover{
+    width: 300px;
+    height: 320px;
+}
+
+.next{
+    color: rgb(64, 110, 138);;
+}
+
+/******************** INDEX 3 **************************************** */
+.container{
+    height: 100vh;
+    width: 100%;
+    background-image: url(./cloud.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+    border: 10px solid;
+    border-color:white green white orange ;
+}
+
+.road{
+    background-image: url(./road.jpg);
+    height: 200px;
+    width: 1000%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: roads 5s linear infinite;
+}
+
+@keyframes roads {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-3500px);
+    }
+}
+
+.city{
+    height: 250px;
+    width: 1000%;
+    background: url(./home\ town.png);
+    position: absolute;
+    bottom: 200px;
+    left: 0;
+    right: 0;
+    background-repeat: repeat-x;
+    animation: city 20s linear infinite;
+}
+@keyframes city {
+    100%{
+        transform: translateX(-2000px);
+    }    
+}
+
+.car{
+    width: 400px;
+    border-color: rebeccapurple;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.car img{
+    width: 100%;
+    animation: carjump 0.5s linear infinite alternate;
+}
+@keyframes carjump {
+    100%{
+        transform: translateY(4px);
+    }
+}
+
+.wheel{
+    position: absolute;
+    bottom: 178px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.wheel img{
+    width: 72px;
+    height: 72px;
+    animation: moves 1s linear infinite;
+}
+.back-wheel{
+    position: absolute;
+    left: -165px;
+}
+.front-wheel{
+    position: absolute;
+    left: 80px;
+}
+@keyframes moves {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+.heading>h1{
+    font-size: 50px;
+}
+.aug{
+    background-color: orange;
+}
+.aug2{
+    background-color: white;
+}
+.aug3{
+    background-color: green;
+}
+
+
+.sun{
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    animation: sunmove 250s linear infinite;
+    filter: drop-shadow(0 0 25px orangered);
+}
+
+.sun img{
+    width: 100%;
+}
+@keyframes sunmove {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-1450px);
+    }
+}
+
+.tiranga{
+    width: 100px;
+    position: absolute;
+    left: 55%;
+    bottom: 198px;
+    z-index: 2;
+}
+
+.tiranga img{
+    width: 100%;
+}
